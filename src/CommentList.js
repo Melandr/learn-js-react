@@ -1,12 +1,44 @@
-import React from "react";
+import React, { Component } from "react";
 import Comment from "./Comment";
 
-export default function CommentList({ comments }) {
-    const commentElements = comments.map((comment) => (
-        <li key={comment.id} style={{ display: "inline-block" }}>
-            <Comment comment={comment} />
-        </li>
-    ));
+class CommentList extends Component {
+    state = {
+        isOpen: false,
+    };
 
-    return <ul>{commentElements}</ul>;
+    render() {
+        const text = this.state.isOpen ? "hide components" : "show components";
+
+        return (
+            <div>
+                <button onClick={this.toggleOpen}>{text}</button>
+                {this.getBody()}
+            </div>
+        );
+    }
+
+    getBody() {
+        if (!this.state.isOpen) return null;
+
+        const { comments } = this.props;
+        if (!comments || !comments.length) return <p>No comments yet</p>;
+
+        return (
+            <ul>
+                {comments.map((comment) => (
+                    <li key={comment.id}>
+                        <Comment comment={comment} />
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
+    toggleOpen = () => {
+        this.setState({
+            isOpen: !this.state.isOpen,
+        });
+    };
 }
+
+export default CommentList;

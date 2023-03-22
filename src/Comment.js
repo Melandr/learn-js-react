@@ -1,12 +1,13 @@
 import React from "react";
 
-export default function Comment(props) {
-    const { comment } = props;
-
+export default function Comment({ comment }) {
     return (
         <div>
-            <h3>{comment.user}</h3>
-            <p>{comment.text}</p>
+            <p>
+                {comment.text}
+                <br />
+                <b>by {comment.user}</b>
+            </p>
         </div>
     );
 }
