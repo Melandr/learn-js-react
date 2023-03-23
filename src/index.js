@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import ArticleList from "./ArticleList";
+import ArticleList from "./components/ArticleList";
 import { articles } from "./fixtures";
 
 const container = document.querySelector("#container");
