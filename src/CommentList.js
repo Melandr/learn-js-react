@@ -11,7 +11,7 @@ class CommentList extends Component {
     };
 
     render() {
-        const text = this.state.isOpen ? "hide components" : "show components";
+        const text = this.state.isOpen ? "hide comments" : "show comments";
 
         return (
             <div>
