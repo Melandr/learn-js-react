@@ -20,7 +20,7 @@
     "bugs": {
         "url": "https://github.com/Melandr/learn-js-react/issues"
     },
-    "homepage": "https://Melandr.github.io/learn-js-react",
+    "homepage": "http://Melandr.github.io/learn-js-react",
     "devDependencies": {
         "@babel/core": "^7.21.3",
         "@babel/preset-env": "^7.20.2",
