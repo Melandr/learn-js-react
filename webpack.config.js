@@ -6,7 +6,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, "build"),
         filename: "bundle.js",
-        publicPath: "/static/",
+        publicPath: "/learn-js-react/static/",
     },
     devServer: {
         historyApiFallback: true,
