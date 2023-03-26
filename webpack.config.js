@@ -12,7 +12,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         static: {
-            directory: path.join(__dirname, "/"),
+            directory: path.join(__dirname, "build"),
         },
         port: 8081,
         open: true,
