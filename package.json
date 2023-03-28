@@ -13,14 +13,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Melandr/learn-js-react.git"
+        "url": "git+https://github.com/melandr/learn-js-react.git"
     },
     "author": "Melandr",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Melandr/learn-js-react/issues"
+        "url": "https://github.com/melandr/learn-js-react/issues"
     },
-    "homepage": "http://Melandr.github.io/learn-js-react",
+    "homepage": "https://melandr.github.io/learn-js-react",
     "devDependencies": {
         "@babel/core": "^7.21.3",
         "@babel/preset-env": "^7.20.2",
