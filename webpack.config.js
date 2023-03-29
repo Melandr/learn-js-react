@@ -6,13 +6,13 @@ module.exports = {
     devtool: "source-map",
     entry: ["./src/index.js"],
     output: {
-        path: path.resolve(__dirname, "build"),
+        path: path.resolve(__dirname, "./build"),
         filename: "bundle.js",
     },
     devServer: {
         historyApiFallback: true,
         static: {
-            directory: path.join(__dirname, "build"),
+            directory: path.join(__dirname, "./build"),
         },
         port: 8081,
         open: true,
@@ -32,7 +32,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, "public", "index.html"),
+            template: path.resolve(__dirname, "public", "index.html"),
         }),
     ],
 };
