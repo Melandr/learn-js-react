@@ -6,7 +6,7 @@ module.exports = {
     devtool: "source-map",
     entry: ["./src/index.js"],
     output: {
-        path: path.resolve(__dirname, "./build"),
+        path: path.join(__dirname, "build"),
         publicPath: "/learn-js-react/",
         filename: "bundle.js",
     },
