@@ -4,10 +4,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     devtool: "source-map",
-    entry: ["./src/index.js"],
+    entry: path.join(__dirname, "learn-js-react/src/index.js"),
     output: {
-        path: path.join(__dirname, "build"),
-        publicPath: "/learn-js-react/",
+        path: path.join(__dirname, "learn-js-react/build"),
         filename: "bundle.js",
     },
     devServer: {
@@ -33,7 +32,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "./public/index.html"),
+            template: path.join(__dirname, "learn-js-react/public/index.html"),
             filename: "index.html",
         }),
     ],
