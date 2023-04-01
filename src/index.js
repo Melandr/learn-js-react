@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import ArticleList from "./components/ArticleList";
+import App from "./components/App";
 import { articles } from "./fixtures";
+import "../src/index.css";
 
 const container = document.querySelector("#container");
 
 ReactDOM.createRoot(container).render(
     <React.StrictMode>
-        <ArticleList articles={articles} />
+        <App articles={articles} />
     </React.StrictMode>
 );

@@ -12,7 +12,6 @@ export default (OriginalComponent) =>
 
         toggleOpen = (ev) => {
             ev && ev.preventDefault && ev.preventDefault();
-            console.log("----", ev.nativeEvent);
 
             this.setState({
                 isOpen: !this.state.isOpen,

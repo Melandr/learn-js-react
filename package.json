@@ -7,20 +7,18 @@
         "start": "concurrently \"npm run dev\" \"npm run api\"",
         "api": "node simple_api/server.js",
         "dev": "webpack serve --mode development --open",
-        "build": "webpack --mode production",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "build": "webpack --mode production"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Melandr/learn-js-react.git"
+        "url": "git+https://github.com/melandr/learn-js-react.git"
     },
     "author": "Melandr",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Melandr/learn-js-react/issues"
+        "url": "https://github.com/melandr/learn-js-react/issues"
     },
-    "homepage": "http://{github-username}.github.io/{repo-name}",
+    "homepage": "https://melandr.github.io/learn-js-react/",
     "devDependencies": {
         "@babel/core": "^7.21.3",
         "@babel/preset-env": "^7.20.2",
@@ -28,7 +26,7 @@
         "babel-loader": "^9.1.2",
         "concurrently": "^7.6.0",
         "css-loader": "^6.7.3",
-        "gh-pages": "^5.0.0",
+        "html-webpack-plugin": "^5.5.0",
         "style-loader": "^3.3.2",
         "webpack": "^5.76.2",
         "webpack-cli": "^5.0.1",

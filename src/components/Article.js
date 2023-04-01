@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import CommentList from "./CommentList";
 import PropTypes from "prop-types";
-import toggleOpen from "../decorators/toggleOpen";
 
 class Article extends Component {
     static propTypes = {
@@ -16,7 +15,7 @@ class Article extends Component {
         const { article, isOpen, toggleOpen } = this.props;
 
         return (
-            <div>
+            <div className="wrapper">
                 <h3>{article.title}</h3>
                 <button onClick={toggleOpen}>{isOpen ? "close" : "open"}</button>
                 {this.getBody()}
@@ -37,7 +36,7 @@ class Article extends Component {
     }
 }
 
-export default toggleOpen(Article);
+export default Article;
 // export default function Article(props) {
 //     const { article } = props;
 //     return (
