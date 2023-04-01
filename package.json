@@ -7,10 +7,7 @@
         "start": "concurrently \"npm run dev\" \"npm run api\"",
         "api": "node simple_api/server.js",
         "dev": "webpack serve --mode development --open",
-        "build": "webpack --mode production",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
-        "publish-demo": "npm run build && npm run deploy"
+        "build": "webpack --mode production"
     },
     "repository": {
         "type": "git",
@@ -29,7 +26,6 @@
         "babel-loader": "^9.1.2",
         "concurrently": "^7.6.0",
         "css-loader": "^6.7.3",
-        "gh-pages": "^5.0.0",
         "html-webpack-plugin": "^5.5.0",
         "style-loader": "^3.3.2",
         "webpack": "^5.76.2",
