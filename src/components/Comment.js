@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Comment({ comment }) {
+export default function Comment({ comment }) {
     return (
         <div>
             <p>
@@ -19,5 +19,3 @@ Comment.propTypes = {
         user: PropTypes.string.isRequired,
     }).isRequired,
 };
-
-export default Comment;
