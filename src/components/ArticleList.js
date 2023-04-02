@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Article from "./Article";
 
-export default class ArticleList extends Component {
+class ArticleList extends Component {
     state = {
         openArticleId: null,
     };
@@ -25,6 +25,7 @@ export default class ArticleList extends Component {
     }
 }
 
+export default ArticleList;
 // export default function ArticleList({ articles }) {
 //     const articleElements = articles.map((article) => (
 //         <li key={article.id}>
