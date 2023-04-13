@@ -1,8 +1,10 @@
-import React, { Component } from "react";
-import CommentList from "./CommentList";
+import React, { Component, PureComponent } from "react";
+import CommentList from "../CommentList";
 import PropTypes from "prop-types";
+import { CSSTransition } from "react-transition-group";
+import "./style.css";
 
-class Article extends Component {
+class Article extends PureComponent {
     static propTypes = {
         article: PropTypes.shape({
             id: PropTypes.string.isRequired,
@@ -13,6 +15,10 @@ class Article extends Component {
         toggleOpen: PropTypes.func,
     };
 
+    state = {
+        updateIndex: 0,
+    };
+
     render() {
         const { article, isOpen, toggleOpen } = this.props;
 
@@ -20,7 +26,9 @@ class Article extends Component {
             <div className="wrapper">
                 <h3>{article.title}</h3>
                 <button onClick={toggleOpen}>{isOpen ? "close" : "open"}</button>
-                {this.getBody()}
+                <CSSTransition classNames="article" in={this.props.isOpen} timeout={500}>
+                    <div>{this.getBody()}</div>
+                </CSSTransition>
             </div>
         );
     }
@@ -32,6 +40,7 @@ class Article extends Component {
         return (
             <section>
                 {article.text}
+                <button onClick={() => this.setState({ updateIndex: this.state.updateIndex + 1 })}>update</button>
                 <CommentList comments={article.comments} />
             </section>
         );
