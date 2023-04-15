@@ -9,13 +9,12 @@ export default class App extends Component {
     static propTypes = {};
 
     render() {
-        const { articles } = this.props;
-
         return (
             <div>
+                <Counter />
                 <UserForm />
-                <Filters articles={articles} />
-                <ArticleList articles={articles} defaultOpenId={articles[0].id} />
+                <Filters articles={[]} />
+                <ArticleList />
             </div>
         );
     }

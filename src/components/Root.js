@@ -4,12 +4,12 @@ import App from "./App";
 import store from "../store";
 import { Provider } from "react-redux";
 
-function Root(props) {
+function Root() {
     Root.propTypes = {};
 
     return (
         <Provider store={store}>
-            <App {...props} />
+            <App />
         </Provider>
     );
 }

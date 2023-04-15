@@ -1,7 +1,9 @@
 import React, { Component, PureComponent } from "react";
+import { connect } from "react-redux";
 import CommentList from "../CommentList";
 import PropTypes from "prop-types";
 import { CSSTransition } from "react-transition-group";
+import { deleteArticle } from "../../AC";
 import "./style.css";
 
 class Article extends PureComponent {
@@ -26,12 +28,20 @@ class Article extends PureComponent {
             <div className="wrapper">
                 <h3>{article.title}</h3>
                 <button onClick={toggleOpen}>{isOpen ? "close" : "open"}</button>
+                <button onClick={this.handleDelete}>delete me</button>
                 <CSSTransition classNames="article" in={this.props.isOpen} timeout={500}>
                     <div>{this.getBody()}</div>
                 </CSSTransition>
             </div>
         );
     }
+
+    handleDelete = () => {
+        const { deleteArticle, article } = this.props;
+        deleteArticle(article.id);
+
+        console.log("----", "deleting article");
+    };
 
     getBody() {
         const { article, isOpen } = this.props;
@@ -47,13 +57,4 @@ class Article extends PureComponent {
     }
 }
 
-export default Article;
-// export default function Article(props) {
-//     const { article } = props;
-//     return (
-//         <div>
-//             <h3>{article.title}</h3>
-//             <section>{article.text}</section>
-//         </div>
-//     );
-// }
+export default connect(null, { deleteArticle })(Article);
