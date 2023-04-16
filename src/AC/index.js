@@ -1,4 +1,4 @@
-import { DELETE_ARTICLE, INCREMENT, SET_SELECT_ARTICLES, SET_DATE, CHANGE_DATE_RANGE } from "../constants";
+import { DELETE_ARTICLE, INCREMENT, CHANGE_DATE_RANGE, CHANGE_SELECTION } from "../constants";
 
 export function increment() {
     return {
@@ -13,23 +13,16 @@ export function deleteArticle(id) {
     };
 }
 
-export function setSelectArticles(selected) {
-    return {
-        type: SET_SELECT_ARTICLES,
-        payload: { selected },
-    };
-}
-
-export function setDate(date) {
-    return {
-        type: SET_DATE,
-        payload: { date },
-    };
-}
-
 export function changeDateRange(dateRange) {
     return {
         type: CHANGE_DATE_RANGE,
         payload: { dateRange },
+    };
+}
+
+export function changeSelection(selected) {
+    return {
+        type: CHANGE_SELECTION,
+        payload: { selected },
     };
 }

@@ -4,9 +4,7 @@ import DateRange from "./DateRange";
 import SelectFilter from "./Select";
 
 class Filters extends Component {
-    static propTypes = {
-        articles: PropTypes.array,
-    };
+    static propTypes = {};
 
     render() {
         return (
