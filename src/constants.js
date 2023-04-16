@@ -5,3 +5,5 @@ export const INCREMENT = "INCREMENT";
 export const SET_SELECT_ARTICLES = "SET_SELECT_ARTICLES";
 
 export const SET_DATE = "SET_DATE";
+
+export const CHANGE_DATE_RANGE = "CHANGE_DATE_RANGE";

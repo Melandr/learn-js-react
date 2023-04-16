@@ -1,4 +1,4 @@
-import { DELETE_ARTICLE, INCREMENT, SET_SELECT_ARTICLES, SET_DATE } from "../constants";
+import { DELETE_ARTICLE, INCREMENT, SET_SELECT_ARTICLES, SET_DATE, CHANGE_DATE_RANGE } from "../constants";
 
 export function increment() {
     return {
@@ -24,5 +24,12 @@ export function setDate(date) {
     return {
         type: SET_DATE,
         payload: { date },
+    };
+}
+
+export function changeDateRange(dateRange) {
+    return {
+        type: CHANGE_DATE_RANGE,
+        payload: { dateRange },
     };
 }

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { format } from "date-fns";
 import { DayPicker } from "react-day-picker";
+import { connect } from "react-redux";
 
 import "react-day-picker/dist/style.css";
 
-class RangeOfDate extends Component {
+class DateRange extends Component {
     state = {
         range: null,
     };
@@ -44,4 +45,5 @@ class RangeOfDate extends Component {
     };
 }
 
-export default RangeOfDate;
+// export default connect((state) => ({ range: state.filters.DateRange }), { changeDateRange })(DateRange);
+export default DateRange;

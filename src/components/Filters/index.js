@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import RangeOfDate from "./RangeOfDate";
-import SelectFilter from "./Select"
+import DateRange from "./DateRange";
+import SelectFilter from "./Select";
 
 class Filters extends Component {
     static propTypes = {
@@ -11,8 +11,8 @@ class Filters extends Component {
     render() {
         return (
             <div>
-                <SelectFilter articles={this.props.articles} />
-                <RangeOfDate />
+                <SelectFilter />
+                <DateRange />
             </div>
         );
     }
